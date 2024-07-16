@@ -77,7 +77,6 @@ void PrintMessage(std::string message)
     return;
 }
 
-
 /*
     Throw an exception
 */
@@ -88,9 +87,9 @@ void RaiseException(std::string message)
     return;
 }
 
-
 /*
     Print the components of a vector
+    The same function is overloaded a few times
 */
 void PrintVector(const double v[3])
 {
@@ -179,5 +178,4 @@ void PrintVector(const array v, std::string vecname)
 double Gaussian(double x, double mu, double sigma)
 {
     return 1 / (sigma * sqrt(2*PI)) * exp(-((x-mu)*(x-mu)) / (2*sigma*sigma));
-
 }

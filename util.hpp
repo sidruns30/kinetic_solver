@@ -9,6 +9,7 @@
     #include <iostream>
     #include <stdexcept>
     #include <string>
+    #include <functional>
     
     const double PI = 3.14159265359;
     const double E =  2.71828182846;
@@ -18,6 +19,9 @@
     typedef std::vector<std::vector<std::vector <double>>> array3D;
     typedef std::vector<size_t> i_array;
     typedef std::vector<std::vector<size_t>> i_array2D;
+    typedef std::function <double(double, double, double, 
+                                double, double, double,
+                                double, double, double)> CouplingFunc;
 
     // Debugging
     void PrintMessage(std::string message);
