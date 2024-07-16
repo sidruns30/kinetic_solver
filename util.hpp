@@ -15,6 +15,7 @@
 
     typedef std::vector<double> array;
     typedef std::vector<std::vector<double>> array2D;
+    typedef std::vector<std::vector<std::vector <double>>> array3D;
     typedef std::vector<size_t> i_array;
     typedef std::vector<std::vector<size_t>> i_array2D;
 
@@ -34,4 +35,7 @@
     array Hat(const array v);
     double Sign(const double x);
     double Heavyside(const double x);
+
+    // Scalar functions
+    double Gaussian(double x, double mu, double sigma);
 #endif

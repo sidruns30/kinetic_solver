@@ -172,3 +172,12 @@ void PrintVector(const array v, std::string vecname)
     std::cout << std::endl;
     return;
 }
+
+/*
+    Return a gaussian that integrates to unity
+*/
+double Gaussian(double x, double mu, double sigma)
+{
+    return 1 / (sigma * sqrt(2*PI)) * exp(-((x-mu)*(x-mu)) / (2*sigma*sigma));
+
+}
