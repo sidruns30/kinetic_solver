@@ -23,6 +23,8 @@
     void RaiseException(std::string message);
     void PrintVector(const double v[3]);
     void PrintVector(const array &v);
+    void PrintVector(const double v[3], std::string vecname);
+    void PrintVector(const array &v, std::string vecname);
 
     // Vector operations
     double Mag(const array v);
