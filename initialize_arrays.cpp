@@ -157,9 +157,3 @@ void IntializeArrays()
   PrintMessage("Initialization Complete!");
   return;
 }
-
-int main()
-{
-  IntializeArrays();
-  return 0;
-}

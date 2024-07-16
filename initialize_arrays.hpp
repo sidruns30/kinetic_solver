@@ -6,5 +6,7 @@
   array k_par;
   array2D A;
   array3D W;
+
+  void IntializeArrays();
 #endif
 
