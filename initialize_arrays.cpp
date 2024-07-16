@@ -80,6 +80,11 @@ void AverageWarrayOverPhi(array &Warr, array k_perp, array k_par, CouplingFunc W
 */
 void IntializeArrays()
 {
+  array k_perp;
+  array k_par;
+  array2D A;
+  array3D W;
+
   // Initialize the k arrays
   const int n_perp = resolution_perp * 2 + 1;
   const int n_par = resolution_par * 2 + 1;
