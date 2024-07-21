@@ -15,36 +15,36 @@
   const float sigma_perp = 0.1;
 
   // User specifies these functions in the cpp file
-  double W00( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W01( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W10( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W11( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W02( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W12( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W20( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W21( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double W22( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
-  double DeltaRate( double k_z, double k_perp, double phi_k,
-              double p_z, double p_perp, double phi_p,
-              double q_z, double q_perp, double phi_q);
+  double W00( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W01( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W10( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W11( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W02( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W12( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W20( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W21( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double W22( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
+  double DeltaRate( double k_par, double k_perp, double phi_k,
+              double p_par, double p_perp, double phi_p,
+              double q_par, double q_perp, double phi_q);
   void InitializeA(array2D &A);
 
 #endif

@@ -1,78 +1,78 @@
 #include "pgen.hpp"
 
 // User needs to initialize the following functions
-double DeltaRate( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double DeltaRate( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
   double rate = 1.;
-  rate *= Gaussian(k_z, p_z + q_z, sigma_par);
+  rate *= Gaussian(k_par, p_par + q_par, sigma_par);
   rate *= Gaussian(k_perp*cos(phi_k), p_perp*cos(phi_p) + q_perp*cos(phi_q), sigma_perp);
   rate *= Gaussian(k_perp*sin(phi_k), p_perp*sin(phi_p) + q_perp*sin(phi_q), sigma_perp);
   return rate;
 }
 
-double W00( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W00( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W01( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W01( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W10( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W10( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W11( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W11( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W02( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W02( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W12( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W12( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W20( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W20( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W21( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W21( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
-double W22( double k_z, double k_perp, double phi_k,
-                double p_z, double p_perp, double phi_p,
-                double q_z, double q_perp, double phi_q)
+double W22( double k_par, double k_perp, double phi_k,
+                double p_par, double p_perp, double phi_p,
+                double q_par, double q_perp, double phi_q)
 {
-    return 0 * DeltaRate(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+    return 0 * DeltaRate(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
 }
 
 
