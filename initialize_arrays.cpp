@@ -86,7 +86,7 @@ void IntializeArrays()
   array3D W;
 
   // Initialize the k arrays
-  const int n_perp = resolution_perp * 2 + 1;
+  const int n_perp = resolution_perp + 1;
   const int n_par = resolution_par * 2 + 1;
   const double k_perp_rat = pow(10., log10(abs_k_perp_max/abs_k_perp_min) / resolution_perp);
   const double k_par_rat = pow(10., log10(abs_k_par_max/abs_k_par_min) / resolution_par);
@@ -95,7 +95,7 @@ void IntializeArrays()
   PrintMessage("Number of wavevectors in perp direction is " + std::to_string(n_perp));
   PrintMessage("Number of wavevectors in z direction is " + std::to_string(n_par));
 
-  for (int ii=0; ii<resolution_perp; ii++) k_perp.push_back(-abs_k_perp_max * pow(k_perp_rat, -(double)ii));
+  //for (int ii=0; ii<resolution_perp; ii++) k_perp.push_back(-abs_k_perp_max * pow(k_perp_rat, -(double)ii));
   k_perp.push_back(0.);
   for (int ii=0; ii<resolution_perp; ii++) k_perp.push_back(abs_k_perp_min * pow(k_perp_rat, (double)ii));
   PrintMessage("K perp initialized!");
@@ -113,6 +113,7 @@ void IntializeArrays()
   PrintMessage("A initialized!");
   //PrintVector(A[0], "A[0]");
 
+  /*
   // Initialize the W array
   W.reserve(Nwaves);
   for (int ii=0; ii<Nwaves; ii++) W[ii].reserve(Nwaves);
@@ -158,7 +159,7 @@ void IntializeArrays()
     AverageWarrayOverPhi(W[2][2], k_par, k_perp, W22);
     PrintMessage("W22 initialized!");
   }
-  
+  */
   PrintMessage("Initialization Complete!");
   return;
 }
