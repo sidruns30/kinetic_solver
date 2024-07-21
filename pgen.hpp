@@ -13,6 +13,7 @@
   const float abs_k_par_max = 100;
   const float sigma_par = 0.1;
   const float sigma_perp = 0.1;
+  const float delta_k = 0.1;
 
   // User specifies these functions in the cpp file
   double W00( double k_par, double k_perp, double phi_k,
