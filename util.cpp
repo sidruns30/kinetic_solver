@@ -1,5 +1,9 @@
 #include "util.hpp"
 
+double Sqr(const double x)
+{
+    return x*x;
+}
 /*
     Return the magnitude of a vector
 */

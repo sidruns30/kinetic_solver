@@ -32,6 +32,7 @@
     void PrintVector(const array &v, std::string vecname);
 
     // Vector operations
+    double Sqr(const double x);
     double Mag(const array v);
     double MagPerp(const array v);
     double Dot(const array v1, const array v2);
