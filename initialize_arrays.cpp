@@ -31,7 +31,7 @@ void AverageWOverPhi(double k_par, double k_perp,
 /*
   Do the same averaging as above, but for an array
 */
-void AverageWarrayOverPhi(array &Warr, array k_perp, array k_par, CouplingFunc Wfunc)
+void AverageWarrayOverPhi(array &Warr, array k_par, array k_perp, CouplingFunc Wfunc)
 {
   const int n_perp = k_perp.size();
   const int n_par = k_par.size();
@@ -121,41 +121,41 @@ void IntializeArrays()
   // Now the most computationally expensive bit to compute the coefficients
   if (Nwaves == 1)
   {
-    AverageWarrayOverPhi(W[0][0], k_perp, k_par, W00);
+    AverageWarrayOverPhi(W[0][0], k_par, k_perp, W00);
     PrintMessage("W00 initialized!");
   }
 
   else if (Nwaves == 2)
   {
-    AverageWarrayOverPhi(W[0][0], k_perp, k_par, W00);
+    AverageWarrayOverPhi(W[0][0], k_par, k_perp, W00);
     PrintMessage("W00 initialized!");
-    AverageWarrayOverPhi(W[0][1], k_perp, k_par, W01);
+    AverageWarrayOverPhi(W[0][1], k_par, k_perp, W01);
     PrintMessage("W01 initialized!");
-    AverageWarrayOverPhi(W[1][0], k_perp, k_par, W10);
+    AverageWarrayOverPhi(W[1][0], k_par, k_perp, W10);
     PrintMessage("W10 initialized!");
-    AverageWarrayOverPhi(W[1][1], k_perp, k_par, W11);
+    AverageWarrayOverPhi(W[1][1], k_par, k_perp, W11);
     PrintMessage("W11 initialized!");
   }
 
   else if (Nwaves == 3)
   {
-    AverageWarrayOverPhi(W[0][0], k_perp, k_par, W00);
+    AverageWarrayOverPhi(W[0][0], k_par, k_perp, W00);
     PrintMessage("W00 initialized!");
-    AverageWarrayOverPhi(W[0][1], k_perp, k_par, W01);
+    AverageWarrayOverPhi(W[0][1], k_par, k_perp, W01);
     PrintMessage("W01 initialized!");
-    AverageWarrayOverPhi(W[1][0], k_perp, k_par, W10);
+    AverageWarrayOverPhi(W[1][0], k_par, k_perp, W10);
     PrintMessage("W10 initialized!");
-    AverageWarrayOverPhi(W[1][1], k_perp, k_par, W11);
+    AverageWarrayOverPhi(W[1][1], k_par, k_perp, W11);
     PrintMessage("W11 initialized!");
-    AverageWarrayOverPhi(W[0][2], k_perp, k_par, W02);
+    AverageWarrayOverPhi(W[0][2], k_par, k_perp, W02);
     PrintMessage("W02 initialized!");
-    AverageWarrayOverPhi(W[1][2], k_perp, k_par, W12);
+    AverageWarrayOverPhi(W[1][2], k_par, k_perp, W12);
     PrintMessage("W12 initialized!");
-    AverageWarrayOverPhi(W[2][0], k_perp, k_par, W20);
+    AverageWarrayOverPhi(W[2][0], k_par, k_perp, W20);
     PrintMessage("W20 initialized!");
-    AverageWarrayOverPhi(W[2][1], k_perp, k_par, W21);
+    AverageWarrayOverPhi(W[2][1], k_par, k_perp, W21);
     PrintMessage("W21 initialized!");
-    AverageWarrayOverPhi(W[2][2], k_perp, k_par, W22);
+    AverageWarrayOverPhi(W[2][2], k_par, k_perp, W22);
     PrintMessage("W22 initialized!");
   }
   
