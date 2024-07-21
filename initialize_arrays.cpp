@@ -3,9 +3,9 @@
 /*
   Function to average Wij over the phi angles
 */
-void AverageWOverPhi(double k_z, double k_perp,
-          double p_z, double p_perp,
-          double q_z, double q_perp,
+void AverageWOverPhi(double k_par, double k_perp,
+          double p_par, double p_perp,
+          double q_par, double q_perp,
           double &Wij, CouplingFunc Wfunc)
 {
   extern const int resolution_phi;
@@ -20,7 +20,7 @@ void AverageWOverPhi(double k_z, double k_perp,
       for (int kk=0; kk<resolution_phi; kk++)
       {
         double phi_q = dphi * kk;
-        Wij += Wfunc(k_z, k_perp, phi_k, p_z, p_perp, phi_p, q_z, q_perp, phi_q);
+        Wij += Wfunc(k_par, k_perp, phi_k, p_par, p_perp, phi_p, q_par, q_perp, phi_q);
       }
     }
   }
@@ -33,8 +33,8 @@ void AverageWOverPhi(double k_z, double k_perp,
 */
 void AverageWarrayOverPhi(array &Warr, array k_perp, array k_par, CouplingFunc Wfunc)
 {
-  const int n_perp = resolution_perp * 2 + 1;
-  const int n_par = resolution_par * 2 + 1;
+  const int n_perp = k_perp.size();
+  const int n_par = k_par.size();
   array p_perp, p_par, q_perp, q_par;
   p_perp = k_perp;
   q_perp = k_perp;
